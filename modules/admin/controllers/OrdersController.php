@@ -51,7 +51,7 @@ class OrdersController extends Controller
 	
 	
     /**
-     * Lists all Orders models.
+     * Список сех ордер моделей.
      * @return mixed
      */
     public function actionIndex()
