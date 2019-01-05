@@ -1,0 +1,31 @@
+Здравствуйте!
+
+Запутался в консольных командах.
+
+в config/console.php 
+
+...
+
+$config = [
+    'id' => 'basic-console',
+    'basePath' => dirname(__DIR__),
+    'bootstrap' => ['log'],
+    'controllerNamespace' => 'app\console',
+...
+
+ в HelloController.php
+<?php
+namespace app\console\controllers;
+use yii\console\Controller;
+use yii\console\ExitCode;
+
+class HelloController extends Controller
+{
+    public function actionIndex($message = 'hello world')
+    {
+        echo $message . "\n";
+        return ExitCode::OK;
+    }
+}
+
+в консоле набираю yii hello/index
